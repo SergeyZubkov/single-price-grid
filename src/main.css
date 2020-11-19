@@ -1,0 +1,190 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+/* Colors */
+    /* Primary */
+
+--cyan: hsl(179, 62%, 43%);
+--cayn-lighten: hsl(179, 52%, 62%);
+--cayn-darken: hsl(179, 68%, 27%);
+--cright-yellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+
+--light-gray: hsl(204, 43%, 93%);
+--grayish-blue: hsl(218, 22%, 67%);
+}
+
+@font-face {
+    font-family: "Karla"; 
+    src: url("./fonts/Karla-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Karla"; 
+    src: url("./fonts/Karla-Bold.ttf") format("truetype"); 
+    font-style: bold; 
+    font-weight: 700; 
+} 
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+    background: var(--light-gray);
+    position: relative;
+    height: 100vh;
+    margin-top: -1px;
+    border-top: 1px solid transparent
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.price-grid-container {
+    margin: 200px auto 0;
+    width: 820px;
+}
+
+.price-grid {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--grayish-blue);
+    display: flex;
+    flex-wrap: wrap;
+    color:#efefef;
+    width: 820px;
+}
+
+.price-grid .top {
+    width: 100%;
+    padding: 40px 35px;
+}
+
+.price-grid .top h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--cyan);
+    margin: 0 0 20px;
+}
+
+.price-grid .top h4 {
+    color: var(--cright-yellow);
+}
+
+.price-grid .top p {
+    color: var(--grayish-blue)
+}
+
+.price-grid .left {
+    background: var(--cyan);
+    flex-grow:1;
+    padding: 35px 40px;
+}
+
+.price-grid .left h4,
+.price-grid .right h4 {
+    color: #fff;
+}
+
+
+.price-grid .left .price {
+    margin: 15px 0;
+    
+}
+
+.price-grid .left .price b {
+    color: #fff;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.price-grid .left button {
+    margin-top: 40px;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px var(--cayn-darken);
+    background: var(--cright-yellow);
+    color: #fff;
+    font-weight: 700;
+}
+
+.price-grid .right {
+    flex-grow: 1;
+    background: var(--cayn-lighten);
+    padding: 35px 40px;
+}
+
+.price-grid .right ul li {
+    margin-bottom: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
